@@ -1,45 +1,55 @@
 ﻿/*
- * Faça um método para realizar a multiplicação e a divisão de 2 números inteiros. Retorne e imprima os dois resultados.
+ * Faça um programa contendo uma sub-rotina que retorne 1 se o número digitado for positivo ou 0 se for negativo.
  */
- 
- using System;
 
-namespace Exercicio_02
+using System;
+
+namespace Exercicio_03
 {
     class Program
     {
-        // Calcula e retorna o valor do produto de 'a' por 'b' e o valor da divisão de 'a' por 'b'
-        static double MultiplicaDivide(int a, int b, out double divisao)
+
+        // Método que retorna 1 caso o número lido for positivo ou 0 caso o número lido for negativo
+        static int Subrotina(double num)
         {
-            double resultado;
-            resultado = a * b;
-            divisao = a / b;
-            return resultado;
+            if (num >= 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         static void Main(string[] args)
         {
             // Declaração de variáveis
-            int a, b;
-            double resultado, divisao;
+            double num;
+            int resultado;
 
-            // Recebendo valores do usuário
+            // Recebendo o valor do usuário
             Console.Clear(); // Limpa tela
             Console.WriteLine(); // Pula linha
-            Console.Write("Entre com o valor de 'a': ");
-            a = int.Parse(Console.ReadLine());
-            Console.Write("Entre com o valor de 'b': ");
-            b = int.Parse(Console.ReadLine());
+            Console.Write("Entre com o valor do número: ");
+            num = int.Parse(Console.ReadLine());
 
-            // Chamando o método MultiplicaDivide
-            resultado = MultiplicaDivide(a, b, out divisao);
+            // Chamando o método Subrotina
+            resultado = Subrotina(num);
 
             // Imprimindo o resultado
             Console.Clear(); // Limpa tela
             Console.WriteLine(); // Pula linha
-            Console.Write("O valor da multiplicação de {0} por {1} é: {2}", a, b, resultado);
-            Console.Write("O valor da divisão de {0} por {1} é: {2}", a, b, divisao);
-            Console.ReadKey();  
+            Console.Write("O valor de retorno foi: " + resultado);
+            if (resultado == 1)
+            {
+                Console.Write("Logo, o número é positivo.");
+            }
+            else if(resultado == -1)
+            {
+                Console.Write("Logo, o número é negativo.");
+            }
+            Console.ReadKey();
         }
     }
 }
