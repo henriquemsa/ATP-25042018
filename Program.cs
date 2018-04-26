@@ -1,0 +1,43 @@
+﻿/*
+ * Faça um método que calcule e imprima a multiplicação de 2 valores inteiros recebidos.
+ */
+
+using System;
+
+namespace Exercicio_01
+{
+    class Program
+    {
+        // Calcula e retorna o valor do produto de 'a' por 'b'
+        static int Multiplica (int a, int b)
+        {
+            int resultado;
+            resultado = a * b;
+            return resultado;
+        }
+
+        static void Main(string[] args)
+        {
+            // Declaração de variáveis
+            int a, b, resultado;
+
+            Console.Clear(); // Limpa tela
+            Console.WriteLine(); // Pula linha
+
+            // Recebendo os valores do usuário
+            Console.Write("Entre com o valor de 'a': ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Entre com o valor de 'b': ");
+            b = int.Parse(Console.ReadLine());
+
+            // Chamando o método multiplica
+            resultado = Multiplica(a, b);
+
+            // Imprimindo o resultado
+            Console.Clear(); // Limpa tela
+            Console.WriteLine(); // Pula linha
+            Console.Write("O valor da multiplicação de {0} por {1} é: {2}", a, b, resultado);
+            Console.ReadKey();
+        }
+    }
+}
