@@ -19,7 +19,7 @@ namespace Exercicio_01
         static void Main(string[] args)
         {
             // Declaração de variáveis
-           int a, b, resultado;
+            int a, b, resultado;
 
             Console.Clear(); // Limpa tela
             Console.WriteLine(); // Pula linha
