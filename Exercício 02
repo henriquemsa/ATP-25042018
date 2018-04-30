@@ -2,7 +2,7 @@
  * Faça um método para realizar a multiplicação e a divisão de 2 números inteiros. Retorne e imprima os dois resultados.
  */
  
- using System;
+using System;
 
 namespace Exercicio_02
 {
